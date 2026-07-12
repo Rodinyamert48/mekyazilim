@@ -135,8 +135,8 @@
         <a href="#ana-sayfa" class="navbar-link">Ana Sayfa</a>
         <a href="#hizmetler" class="navbar-link">Hizmetler</a>
         <a href="#portfolyo" class="navbar-link">Projeler</a>
-        <a href="#teknolojiler" class="navbar-link">Teknolojiler</a>
         <a href="#nasil-calisiyoruz" class="navbar-link">Süreç</a>
+        <a href="#teknolojiler" class="navbar-link">Teknolojiler</a>
         <a href="#fiyatlar" class="navbar-link">Fiyatlar</a>
         <a href="#blog" class="navbar-link">Blog</a>
         <a href="#hakkimizda" class="navbar-link">Hakkımızda</a>
@@ -154,8 +154,8 @@
       <a href="#ana-sayfa" class="navbar-link">Ana Sayfa</a>
       <a href="#hizmetler" class="navbar-link">Hizmetler</a>
       <a href="#portfolyo" class="navbar-link">Projeler</a>
-      <a href="#teknolojiler" class="navbar-link">Teknolojiler</a>
       <a href="#nasil-calisiyoruz" class="navbar-link">Süreç</a>
+      <a href="#teknolojiler" class="navbar-link">Teknolojiler</a>
       <a href="#fiyatlar" class="navbar-link">Fiyatlar</a>
       <a href="#blog" class="navbar-link">Blog</a>
       <a href="#hakkimizda" class="navbar-link">Hakkımızda</a>
@@ -255,10 +255,6 @@ app.<span class="code-method">init</span>();</code></pre>
     <section class="stats" aria-label="İstatistikler">
       <div class="stats-container">
         <div class="stats-grid">
-          <div class="stat-card fade-in">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">Mutlu Müşteri</div>
-          </div>
           <div class="stat-card fade-in delay-100">
             <div class="stat-number">3+</div>
             <div class="stat-label">Yıllık Deneyim</div>
@@ -472,7 +468,7 @@ app.<span class="code-method">init</span>();</code></pre>
             </div>
             <ul class="pricing-features">
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Mobil Uyumlu Tasarım</li>
-              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 48-72 Saat Teslimat</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 48-128 Saat Teslimat</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 3 Revizyon Hakkı</li>
             </ul>
             <a href="#iletisim" class="btn btn-secondary">Paketi Seç</a>
@@ -491,7 +487,7 @@ app.<span class="code-method">init</span>();</code></pre>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 5 Sayfa</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Mobil Uyumlu Tasarım</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> SEO Optimizasyonu</li>
-              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 24-72 Saat Teslimat</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 48-96 Saat Teslimat</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 5 Revizyon Hakkı</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Öncelikli Destek</li>
             </ul>
@@ -510,7 +506,7 @@ app.<span class="code-method">init</span>();</code></pre>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 10 Sayfa</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Mobil Uyumlu Tasarım</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> SEO & Performans Optimizasyonu</li>
-              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 24-48 Saat Teslimat</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 48-72 Saat Teslimat</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Sınırsız Revizyon Hakkı</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Öncelikli Destek</li>
             </ul>
@@ -562,9 +558,9 @@ app.<span class="code-method">init</span>();</code></pre>
                 </tr>
                 <tr>
                   <td>Teslimat Süresi</td>
-                  <td class="col-standard">48-72 Saat</td>
-                  <td class="col-business featured-col">24-72 Saat</td>
-                  <td class="col-enterprise">24-48 Saat</td>
+                  <td class="col-standard">48-128 Saat</td>
+                  <td class="col-business featured-col">48-96 Saat</td>
+                  <td class="col-enterprise">48-72 Saat</td>
                 </tr>
                 <tr>
                   <td>Revizyon Hakkı</td>
@@ -607,6 +603,21 @@ app.<span class="code-method">init</span>();</code></pre>
                     <span>1</span>
                     <span class="range-value" id="calc-pages-value">5</span>
                     <span>20</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-card-glass">
+                <div class="calc-section-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Teslimat Süresi
+                </div>
+                <div class="range-group">
+                  <input type="range" id="calc-delivery" min="48" max="168" value="96" step="1">
+                  <div class="range-labels">
+                    <span>48 Saat</span>
+                    <span class="range-value" id="calc-delivery-value">96 Saat</span>
+                    <span>168 Saat</span>
                   </div>
                 </div>
               </div>
@@ -684,6 +695,10 @@ app.<span class="code-method">init</span>();</code></pre>
                     <span class="detail-label">Ek Özellikler</span>
                     <span class="detail-value" id="calc-extras">1.000 ₺</span>
                   </div>
+                  <div class="calc-detail-row">
+                    <span class="detail-label">Teslimat Hızı</span>
+                    <span class="detail-value" id="calc-speed-factor">1.0x</span>
+                  </div>
                   <div class="calc-detail-row calc-total">
                     <span class="detail-label">Toplam</span>
                     <span class="detail-value calc-total-value" id="calc-total">8.500 ₺</span>
@@ -718,7 +733,7 @@ app.<span class="code-method">init</span>();</code></pre>
               </div>
               <h3 class="blog-title">Modern Web Sitesi Nasıl Olmalı?</h3>
               <p class="blog-excerpt">2026 yılında bir web sitesinde olması gereken temel özellikler: hız, mobil uyumluluk, SEO ve kullanıcı deneyimi.</p>
-              <a href="#iletisim" class="blog-link">Devamını Oku →</a>
+              <a href="https://youtu.be/3Ae8j9xQ9j4?si=OHsH9X5EzO1oYT90" target="_blank" rel="noopener noreferrer" class="blog-link">İzle →</a>
             </div>
           </article>
           <article class="blog-card fade-in delay-100">
@@ -734,7 +749,7 @@ app.<span class="code-method">init</span>();</code></pre>
               </div>
               <h3 class="blog-title">SEO Uyumlu Web Sitesi İpuçları</h3>
               <p class="blog-excerpt">Arama motorlarında üst sıralara çıkmak için web sitenizde yapmanız gereken SEO optimizasyonları.</p>
-              <a href="#iletisim" class="blog-link">Devamını Oku →</a>
+              <a href="https://youtu.be/ThaqP_AJ_NE?si=fwfor4mBedGvy6BC" target="_blank" rel="noopener noreferrer" class="blog-link">İzle →</a>
             </div>
           </article>
           <article class="blog-card fade-in delay-200">
@@ -750,7 +765,7 @@ app.<span class="code-method">init</span>();</code></pre>
               </div>
               <h3 class="blog-title">Mobil Uyumluluk Neden Önemli?</h3>
               <p class="blog-excerpt">Mobil cihazlardan gelen trafiğin %60'ı geçtiği günümüzde, responsive tasarım artık bir tercih değil zorunluluk.</p>
-              <a href="#iletisim" class="blog-link">Devamını Oku →</a>
+              <a href="https://youtu.be/X1rrI58S6fc?si=3bTbg0YsRjN1s8Mm" target="_blank" rel="noopener noreferrer" class="blog-link">İzle →</a>
             </div>
           </article>
         </div>

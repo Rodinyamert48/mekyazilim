@@ -12,7 +12,7 @@
             </div>
             <ul class="pricing-features">
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Mobil Uyumlu Tasarım</li>
-              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 48-72 Saat Teslimat</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 48-128 Saat Teslimat</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 3 Revizyon Hakkı</li>
             </ul>
             <a href="#iletisim" class="btn btn-secondary">Paketi Seç</a>
@@ -31,7 +31,7 @@
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 5 Sayfa</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Mobil Uyumlu Tasarım</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> SEO Optimizasyonu</li>
-              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 24-72 Saat Teslimat</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 48-96 Saat Teslimat</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 5 Revizyon Hakkı</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Öncelikli Destek</li>
             </ul>
@@ -50,7 +50,7 @@
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 10 Sayfa</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Mobil Uyumlu Tasarım</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> SEO & Performans Optimizasyonu</li>
-              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 24-48 Saat Teslimat</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 48-72 Saat Teslimat</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Sınırsız Revizyon Hakkı</li>
               <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Öncelikli Destek</li>
             </ul>
@@ -102,9 +102,9 @@
                 </tr>
                 <tr>
                   <td>Teslimat Süresi</td>
-                  <td class="col-standard">48-72 Saat</td>
-                  <td class="col-business featured-col">24-72 Saat</td>
-                  <td class="col-enterprise">24-48 Saat</td>
+                  <td class="col-standard">48-128 Saat</td>
+                  <td class="col-business featured-col">48-96 Saat</td>
+                  <td class="col-enterprise">48-72 Saat</td>
                 </tr>
                 <tr>
                   <td>Revizyon Hakkı</td>
@@ -147,6 +147,21 @@
                     <span>1</span>
                     <span class="range-value" id="calc-pages-value">5</span>
                     <span>20</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-card-glass">
+                <div class="calc-section-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Teslimat Süresi
+                </div>
+                <div class="range-group">
+                  <input type="range" id="calc-delivery" min="48" max="168" value="96" step="1">
+                  <div class="range-labels">
+                    <span>48 Saat</span>
+                    <span class="range-value" id="calc-delivery-value">96 Saat</span>
+                    <span>168 Saat</span>
                   </div>
                 </div>
               </div>
@@ -223,6 +238,10 @@
                   <div class="calc-detail-row">
                     <span class="detail-label">Ek Özellikler</span>
                     <span class="detail-value" id="calc-extras">1.000 ₺</span>
+                  </div>
+                  <div class="calc-detail-row">
+                    <span class="detail-label">Teslimat Hızı</span>
+                    <span class="detail-value" id="calc-speed-factor">1.0x</span>
                   </div>
                   <div class="calc-detail-row calc-total">
                     <span class="detail-label">Toplam</span>
