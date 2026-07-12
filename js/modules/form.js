@@ -2,11 +2,10 @@ export function initContactForm() {
   const form = document.getElementById('contact-form');
   const successMessage = document.getElementById('form-success');
   const errorMessage = document.getElementById('form-error');
-  const submitBtn = form?.querySelector('[type="submit"]');
 
   if (!form) return;
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     hideStatus(successMessage);
@@ -16,66 +15,24 @@ export function initContactForm() {
       return;
     }
 
-    const formData = new FormData(form);
-    const payload = {
-      name: String(formData.get('name') || '').trim(),
-      email: String(formData.get('email') || '').trim(),
-      phone: String(formData.get('phone') || '').trim(),
-      package: String(formData.get('package') || '').trim(),
-      message: String(formData.get('message') || '').trim(),
-      website: String(formData.get('website') || '').trim() // honeypot
-    };
+    const nextUrl = window.location.origin + window.location.pathname + '#iletisim';
 
-    setSubmitting(submitBtn, true);
+    form.action = 'https://formsubmit.co/mertegek12@gmail.com';
+    form.method = 'POST';
 
-    try {
-      const res = await fetch('https://formsubmit.co/ajax/mertegek12@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json'
-        },
-        body: JSON.stringify(payload)
-      });
+    const nextInput = document.createElement('input');
+    nextInput.type = 'hidden';
+    nextInput.name = '_next';
+    nextInput.value = nextUrl;
+    form.appendChild(nextInput);
 
-      let data = {};
-      try {
-        data = await res.json();
-      } catch {
-        data = {};
-      }
+    const templateInput = document.createElement('input');
+    templateInput.type = 'hidden';
+    templateInput.name = '_template';
+    templateInput.value = 'table';
+    form.appendChild(templateInput);
 
-      if (!res.ok) {
-        const msg = data.message || 'Gönderim başarısız. Lütfen tekrar deneyin.';
-        showStatus(errorMessage, msg);
-
-        if (data.errors && typeof data.errors === 'object') {
-          Object.entries(data.errors).forEach(([field, message]) => {
-            const input = form.querySelector(`[name="${field}"]`);
-            if (input) {
-              setFieldError(input, message);
-            }
-          });
-        }
-        return;
-      }
-
-      form.reset();
-      form.style.display = 'none';
-      showStatus(successMessage, data.message || 'Mesajınız alındı. En kısa sürede dönüş yapacağız.');
-
-      setTimeout(() => {
-        form.style.display = 'block';
-        hideStatus(successMessage);
-      }, 6000);
-    } catch {
-      showStatus(
-        errorMessage,
-        'Bağlantı hatası. Lütfen internetinizi kontrol edin veya WhatsApp ile yazın.'
-      );
-    } finally {
-      setSubmitting(submitBtn, false);
-    }
+    form.submit();
   });
 
   const inputs = form.querySelectorAll('.form-input, .form-select, .form-textarea');
