@@ -2,10 +2,11 @@ export function initContactForm() {
   const form = document.getElementById('contact-form');
   const successMessage = document.getElementById('form-success');
   const errorMessage = document.getElementById('form-error');
+  const submitBtn = form?.querySelector('[type="submit"]');
 
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     hideStatus(successMessage);
@@ -15,24 +16,53 @@ export function initContactForm() {
       return;
     }
 
-    const nextUrl = window.location.origin + window.location.pathname + '#iletisim';
+    const formData = new FormData(form);
+    const payload = {
+      access_key: 'dcee7bc0-66ff-4aa7-8f4a-637affa5860b',
+      subject: 'MEKYAZILIM - Yeni iletişim formu mesajı',
+      name: String(formData.get('name') || '').trim(),
+      email: String(formData.get('email') || '').trim(),
+      phone: String(formData.get('phone') || '').trim(),
+      package: String(formData.get('package') || '').trim(),
+      message: String(formData.get('message') || '').trim(),
+      botcheck: String(formData.get('website') || '').trim()
+    };
 
-    form.action = 'https://formsubmit.co/mertegek12@gmail.com';
-    form.method = 'POST';
+    setSubmitting(submitBtn, true);
 
-    const nextInput = document.createElement('input');
-    nextInput.type = 'hidden';
-    nextInput.name = '_next';
-    nextInput.value = nextUrl;
-    form.appendChild(nextInput);
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
 
-    const templateInput = document.createElement('input');
-    templateInput.type = 'hidden';
-    templateInput.name = '_template';
-    templateInput.value = 'table';
-    form.appendChild(templateInput);
+      const data = await res.json();
 
-    form.submit();
+      if (!res.ok || !data.success) {
+        showStatus(errorMessage, data.message || 'Gönderim başarısız. Lütfen tekrar deneyin.');
+        return;
+      }
+
+      form.reset();
+      form.style.display = 'none';
+      showStatus(successMessage, 'Mesajınız alındı. En kısa sürede dönüş yapacağız.');
+
+      setTimeout(() => {
+        form.style.display = 'block';
+        hideStatus(successMessage);
+      }, 6000);
+    } catch {
+      showStatus(
+        errorMessage,
+        'Bağlantı hatası. Lütfen internetinizi kontrol edin veya WhatsApp ile yazın.'
+      );
+    } finally {
+      setSubmitting(submitBtn, false);
+    }
   });
 
   const inputs = form.querySelectorAll('.form-input, .form-select, .form-textarea');
