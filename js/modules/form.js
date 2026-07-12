@@ -137,20 +137,30 @@ function validateField(input) {
     if (!emailRegex.test(input.value)) {
       isValid = false;
       errorMessage = 'Geçerli bir e-posta adresi girin.';
+    } else {
+      const domain = input.value.split('@')[1].toLowerCase();
+      const allowedDomains = ['gmail.com', 'yopmail.com', 'outlook.com', 'hotmail.com', 'live.com', 'msn.com'];
+      const isAllowed = allowedDomains.includes(domain);
+      const hasSubdomain = (domain.match(/\./g) || []).length >= 2;
+      if (!isAllowed && !hasSubdomain) {
+        isValid = false;
+        errorMessage = 'Yalnızca @gmail.com, @outlook.com veya kurumsal e-posta adresleri kabul edilir.';
+      }
     }
   }
 
   if (input.type === 'tel' && input.value.trim()) {
-    const phoneRegex = /^[\d\s+\-()]{10,}$/;
-    if (!phoneRegex.test(input.value)) {
+    const cleaned = input.value.replace(/[\s\-()]/g, '');
+    const isTurkish = /^(\+90|0)?[0-9]{10}$/.test(cleaned) && /^(\+90|0)?5[0-9]{9}$/.test(cleaned);
+    if (!isTurkish) {
       isValid = false;
-      errorMessage = 'Geçerli bir telefon numarası girin.';
+      errorMessage = 'Geçerli bir Türk telefon numarası girin (05xx xxx xx xx).';
     }
   }
 
-  if (input.minLength > 0 && input.value.trim().length < input.minLength) {
+  if (input.name === 'message' && input.value.trim().length < 25) {
     isValid = false;
-    errorMessage = `En az ${input.minLength} karakter girin.`;
+    errorMessage = 'Mesaj en az 25 karakter olmalıdır.';
   }
 
   if (isValid) {

@@ -30,6 +30,8 @@ ${readPartial('navbar.html')}
 ${readPartial('sections/hero.html')}
 ${readPartial('sections/stats.html')}
 ${readPartial('sections/services.html')}
+${readPartial('sections/portfolio.html')}
+${readPartial('sections/process.html')}
 ${readPartial('sections/pricing.html')}
 ${readPartial('sections/about.html')}
 ${readPartial('sections/testimonials.html')}

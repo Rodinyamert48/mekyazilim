@@ -41,6 +41,23 @@ function setupScrollAnimations(selector = '.fade-in, .fade-in-left, .fade-in-rig
   elements.forEach(el => observer.observe(el));
 }
 
+function initScrollToTop() {
+  const btn = document.getElementById('scroll-top');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 function setupScrollProgressBar() {
   const progressBar = document.getElementById('scroll-progress');
   if (!progressBar) return;
@@ -113,6 +130,7 @@ export {
   setupIntersectionObserver,
   setupScrollAnimations,
   setupScrollProgressBar,
+  initScrollToTop,
   debounce,
   throttle,
   isElementInViewport,

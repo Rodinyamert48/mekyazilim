@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="css/sections/services.css">
   <link rel="stylesheet" href="css/sections/pricing.css">
   <link rel="stylesheet" href="css/sections/about.css">
+  <link rel="stylesheet" href="css/sections/portfolio.css">
+  <link rel="stylesheet" href="css/sections/process.css">
   <link rel="stylesheet" href="css/sections/testimonials.css">
   <link rel="stylesheet" href="css/sections/faq.css">
   <link rel="stylesheet" href="css/sections/contact.css">
@@ -131,6 +133,8 @@
       <nav class="navbar-menu" role="navigation" aria-label="Ana navigasyon">
         <a href="#ana-sayfa" class="navbar-link">Ana Sayfa</a>
         <a href="#hizmetler" class="navbar-link">Hizmetler</a>
+        <a href="#portfolyo" class="navbar-link">Projeler</a>
+        <a href="#nasil-calisiyoruz" class="navbar-link">Süreç</a>
         <a href="#fiyatlar" class="navbar-link">Fiyatlar</a>
         <a href="#hakkimizda" class="navbar-link">Hakkımızda</a>
         <a href="#sss" class="navbar-link">SSS</a>
@@ -146,6 +150,8 @@
     <div id="mobile-menu" class="mobile-menu" role="navigation" aria-label="Mobil navigasyon">
       <a href="#ana-sayfa" class="navbar-link">Ana Sayfa</a>
       <a href="#hizmetler" class="navbar-link">Hizmetler</a>
+      <a href="#portfolyo" class="navbar-link">Projeler</a>
+      <a href="#nasil-calisiyoruz" class="navbar-link">Süreç</a>
       <a href="#fiyatlar" class="navbar-link">Fiyatlar</a>
       <a href="#hakkimizda" class="navbar-link">Hakkımızda</a>
       <a href="#sss" class="navbar-link">SSS</a>
@@ -289,6 +295,107 @@ app.<span class="code-method">init</span>();</code></pre>
             <p class="service-description">Tüm cihazlarda kusursuz çalışan mobil uyumlu arayüzler. Telefon, tablet, masaüstü — hepsi mükemmel.</p>
             <a href="#iletisim" class="service-link">Detay Al →</a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolyo" class="portfolio" aria-labelledby="portfolio-title">
+      <div class="portfolio-container">
+        <header class="section-header">
+          <h2 id="portfolio-title" class="section-title fade-in">Projelerimiz</h2>
+          <p class="section-subtitle fade-in delay-100">Gururla sunduğumuz tamamlanmış projelerimizden biri.</p>
+        </header>
+        <div class="portfolio-grid">
+          <article class="portfolio-card fade-in">
+            <div class="portfolio-preview">
+              <div class="portfolio-browser-bar">
+                <span class="portfolio-dot red"></span>
+                <span class="portfolio-dot yellow"></span>
+                <span class="portfolio-dot green"></span>
+                <span class="portfolio-url">dizibul.vercel.app</span>
+              </div>
+              <div class="portfolio-thumb">
+                <div class="thumb-content">
+                  <div class="thumb-icon">🎲</div>
+                  <div class="thumb-title">DiziBul</div>
+                  <div class="thumb-subtitle">Rastgele Dizi Önerici</div>
+                  <div class="thumb-badges">
+                    <span class="thumb-badge">TVmaze API</span>
+                    <span class="thumb-badge">Anime.js</span>
+                    <span class="thumb-badge">LocalStorage</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-name">DiziBul — Rastgele Dizi Önerici</h3>
+              <p class="portfolio-desc">TVmaze API ile binlerce dizi arasından ruh halinize uygun veya tamamen rastgele öneriler alın. İzleme listenizi oluşturun, fragmanları izleyin.</p>
+              <div class="portfolio-features">
+                <span class="portfolio-feature">🎭 Ruh Hali Modu</span>
+                <span class="portfolio-feature">📌 İzleme Listesi</span>
+                <span class="portfolio-feature">🎨 3 Tema</span>
+                <span class="portfolio-feature">📱 Mobil Uyumlu</span>
+              </div>
+              <a href="https://dizibul.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary portfolio-cta">
+                Canlı Gör → 
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="nasil-calisiyoruz" class="process" aria-labelledby="process-title">
+      <div class="process-container">
+        <header class="section-header">
+          <h2 id="process-title" class="section-title fade-in">Nasıl <span class="highlight">Çalışıyoruz?</span></h2>
+          <p class="section-subtitle fade-in delay-100">Hayalinizdeki web sitesine giden yol sadece 5 adım.</p>
+        </header>
+        <div class="process-steps">
+          <div class="process-step fade-in">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <div class="step-icon" aria-hidden="true">📋</div>
+              <h3 class="step-title">Talep & Keşif</h3>
+              <p class="step-text">İhtiyaçlarınızı dinliyor, hedeflerinizi ve vizyonunuzu anlıyoruz. Proje kapsamını belirliyoruz.</p>
+            </div>
+            <div class="step-connector" aria-hidden="true"></div>
+          </div>
+          <div class="process-step fade-in delay-100">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <div class="step-icon" aria-hidden="true">🎨</div>
+              <h3 class="step-title">Tasarım & Planlama</h3>
+              <p class="step-text">AI destekli araçlarımızla wireframe ve prototip hazırlıyoruz. Tasarımı sizinle birlikte şekillendiriyoruz.</p>
+            </div>
+            <div class="step-connector" aria-hidden="true"></div>
+          </div>
+          <div class="process-step fade-in delay-200">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <div class="step-icon" aria-hidden="true">⚡</div>
+              <h3 class="step-title">Geliştirme</h3>
+              <p class="step-text">Modern teknolojilerle sitenizi kodluyor, SEO ve performans optimizasyonlarını yapıyoruz.</p>
+            </div>
+            <div class="step-connector" aria-hidden="true"></div>
+          </div>
+          <div class="process-step fade-in delay-300">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <div class="step-icon" aria-hidden="true">✅</div>
+              <h3 class="step-title">Test & Onay</h3>
+              <p class="step-text">Sitenizi tüm cihazlarda test ediyor, sizden onay alıyoruz. Revizyonları anında uyguluyoruz.</p>
+            </div>
+            <div class="step-connector" aria-hidden="true"></div>
+          </div>
+          <div class="process-step fade-in delay-400">
+            <div class="step-number">05</div>
+            <div class="step-content">
+              <div class="step-icon" aria-hidden="true">🚀</div>
+              <h3 class="step-title">Yayın & Destek</h3>
+              <p class="step-text">Sitenizi yayına alıyor, sonrasında da destek sağlamaya devam ediyoruz.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -632,6 +739,8 @@ app.<span class="code-method">init</span>();</code></pre>
           <div class="footer-links">
             <a href="#ana-sayfa" class="footer-link">Ana Sayfa</a>
             <a href="#hizmetler" class="footer-link">Hizmetler</a>
+            <a href="#portfolyo" class="footer-link">Projeler</a>
+            <a href="#nasil-calisiyoruz" class="footer-link">Süreç</a>
             <a href="#fiyatlar" class="footer-link">Fiyatlar</a>
             <a href="#hakkimizda" class="footer-link">Hakkımızda</a>
             <a href="#sss" class="footer-link">SSS</a>
@@ -655,6 +764,10 @@ app.<span class="code-method">init</span>();</code></pre>
       </div>
     </div>
   </footer>
+
+  <button type="button" class="scroll-top" id="scroll-top" aria-label="Yukarı çık">
+    ↑
+  </button>
 
   <div class="floating-whatsapp" aria-label="WhatsApp ile iletişime geç">
     <span class="floating-whatsapp-label">Yazın!</span>

@@ -4,7 +4,7 @@ import { initAccordion } from './modules/accordion.js';
 import { initAnimations } from './modules/animations.js';
 import { initCustomCursor } from './modules/cursor.js';
 import { initContactForm } from './modules/form.js';
-import { setupScrollProgressBar } from './utils.js';
+import { setupScrollProgressBar, initScrollToTop } from './utils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initLoadingScreen();
@@ -14,4 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initCustomCursor();
   initContactForm();
   setupScrollProgressBar();
+  initScrollToTop();
 });
