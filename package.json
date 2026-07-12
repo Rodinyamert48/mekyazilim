@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "dev": "npx vercel dev"
+    "dev": "npx serve public"
   },
   "dependencies": {
     "resend": "^4.0.0"
