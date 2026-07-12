@@ -1,10 +1,11 @@
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
 const partials = join(root, 'partials');
+const outDir = join(root, 'public');
 
 function readPartial(relPath) {
   return readFileSync(join(partials, relPath), 'utf8');
@@ -43,6 +44,15 @@ ${readPartial('footer.html')}
 </html>
 `;
 
-const outPath = join(root, 'index.html');
-writeFileSync(outPath, html, 'utf8');
-console.log(`Built ${outPath}`);
+// Fresh public/ for Vercel outputDirectory
+rmSync(outDir, { recursive: true, force: true });
+mkdirSync(outDir, { recursive: true });
+
+writeFileSync(join(outDir, 'index.html'), html, 'utf8');
+cpSync(join(root, 'css'), join(outDir, 'css'), { recursive: true });
+cpSync(join(root, 'js'), join(outDir, 'js'), { recursive: true });
+
+// Keep root index.html in sync for local open-without-build
+writeFileSync(join(root, 'index.html'), html, 'utf8');
+
+console.log(`Built ${outDir} (index.html + css + js)`);
