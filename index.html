@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MEKYAZILIM - 48-72 saatte profesyonel web siteleri. Modern, hızlı ve mobil uyumlu web tasarım çözümleri. AI destekli süreçlerle premium kalite.">
+  <meta name="keywords" content="web tasarım, web sitesi, profesyonel web, hızlı web, mobil uyumlu, SEO, MEKYAZILIM">
+  <meta name="author" content="Mert">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="MEKYAZILIM - Profesyonel Web Tasarım Ajansı">
+  <meta property="og:description" content="48-72 saatte profesyonel web siteniz hazır. Modern, hızlı ve mobil uyumlu çözümler.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="theme-color" content="#090d16">
+  <link rel="canonical" href="https://mekyazilim.com/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23090d16'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-size='42' font-family='Arial,sans-serif' font-weight='700' fill='%2338bdf8'%3EM%3C/text%3E%3C/svg%3E">
+  <title>MEKYAZILIM - Profesyonel Web Tasarım Ajansı | 48-72 Saatte Teslim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/cards.css">
+  <link rel="stylesheet" href="css/components/badges.css">
+  <link rel="stylesheet" href="css/components/forms.css">
+  <link rel="stylesheet" href="css/sections/navbar.css">
+  <link rel="stylesheet" href="css/sections/hero.css">
+  <link rel="stylesheet" href="css/sections/stats.css">
+  <link rel="stylesheet" href="css/sections/services.css">
+  <link rel="stylesheet" href="css/sections/pricing.css">
+  <link rel="stylesheet" href="css/sections/about.css">
+  <link rel="stylesheet" href="css/sections/testimonials.css">
+  <link rel="stylesheet" href="css/sections/faq.css">
+  <link rel="stylesheet" href="css/sections/contact.css">
+  <link rel="stylesheet" href="css/sections/footer.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <style>
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #2563eb, #38bdf8);
+      z-index: 10000;
+      width: 0%;
+      transition: width 0.1s linear;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    }
+
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: #090d16;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+
+    #loader.loader-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader-logo {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #60A5FA, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .loader-spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(56, 189, 248, 0.2);
+      border-top-color: #38bdf8;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .custom-cursor {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(56, 189, 248, 0.6);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99998;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+    }
+
+    .custom-cursor.cursor-hover {
+      width: 32px;
+      height: 32px;
+      border-color: rgba(56, 189, 248, 0.9);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .custom-cursor { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <div id="loader" role="status" aria-label="Sayfa yükleniyor">
+    <div class="loader-logo">MEKYAZILIM</div>
+    <div class="loader-spinner"></div>
+  </div>
+
+  <a href="#ana-sayfa" class="skip-link">Ana içeriğe atla</a>
+
+  <header class="navbar" role="banner">
+    <div class="navbar-container">
+      <a href="#ana-sayfa" class="navbar-logo" aria-label="MEKYAZILIM Ana Sayfa">MEKYAZILIM</a>
+      <nav class="navbar-menu" role="navigation" aria-label="Ana navigasyon">
+        <a href="#ana-sayfa" class="navbar-link">Ana Sayfa</a>
+        <a href="#hizmetler" class="navbar-link">Hizmetler</a>
+        <a href="#fiyatlar" class="navbar-link">Fiyatlar</a>
+        <a href="#hakkimizda" class="navbar-link">Hakkımızda</a>
+        <a href="#sss" class="navbar-link">SSS</a>
+        <a href="#iletisim" class="navbar-link">İletişim</a>
+        <a href="#iletisim" class="btn btn-primary btn-sm">Teklif Al</a>
+      </nav>
+      <button type="button" class="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" role="navigation" aria-label="Mobil navigasyon">
+      <a href="#ana-sayfa" class="navbar-link">Ana Sayfa</a>
+      <a href="#hizmetler" class="navbar-link">Hizmetler</a>
+      <a href="#fiyatlar" class="navbar-link">Fiyatlar</a>
+      <a href="#hakkimizda" class="navbar-link">Hakkımızda</a>
+      <a href="#sss" class="navbar-link">SSS</a>
+      <a href="#iletisim" class="navbar-link">İletişim</a>
+      <a href="#iletisim" class="btn btn-primary">Teklif Al</a>
+    </div>
+  </header>
+
+
+  <main>
+    <section id="ana-sayfa" class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid-pattern"></div>
+      </div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge fade-in">
+            <span aria-hidden="true">⚡</span> AI Destekli · 3+ Yıl Deneyim
+          </div>
+          <h1 id="hero-title" class="hero-title fade-in delay-100">
+            <span class="highlight">48-72 Saatte</span> Profesyonel Web Siten Hazır
+          </h1>
+          <p class="hero-subtitle fade-in delay-200">
+            Modern, hızlı ve mobil uyumlu web siteleri geliştiriyoruz. İşletmenizi dijitalde profesyonel gösteren premium çözümler sunuyoruz.
+          </p>
+          <div class="hero-cta fade-in delay-300">
+            <a href="#iletisim" class="btn btn-primary btn-lg">Web Siteni Satın Al →</a>
+            <a href="#fiyatlar" class="btn btn-secondary btn-lg">Fiyatları Gör</a>
+          </div>
+          <div class="hero-badges fade-in delay-400">
+            <span class="hero-badge-item"><span aria-hidden="true">⚡</span> 48-72 Saat Teslim</span>
+            <span class="hero-badge-item"><span aria-hidden="true">💎</span> Premium Tasarım</span>
+            <span class="hero-badge-item"><span aria-hidden="true">📱</span> Mobil Uyumlu</span>
+          </div>
+        </div>
+        <div class="hero-mockup fade-in-right delay-200" aria-hidden="true">
+          <div class="mockup-container">
+            <div class="mockup-browser-bar">
+              <span class="mockup-dot red"></span>
+              <span class="mockup-dot yellow"></span>
+              <span class="mockup-dot green"></span>
+              <span class="mockup-url">mekyazilim.com</span>
+            </div>
+            <div class="mockup-content">
+              <div class="code-editor">
+                <div class="code-line-numbers">
+                  <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span>
+                </div>
+                <pre class="code-content"><code><span class="code-comment">// MEKYAZILIM — Web App Engine</span>
+<span class="code-keyword">const</span> <span class="code-variable">app</span> = {
+  <span class="code-property">name</span>: <span class="code-string">"MEKYAZILIM"</span>,
+  <span class="code-property">version</span>: <span class="code-string">"2.0.0"</span>,
+  <span class="code-property">delivery</span>: <span class="code-string">"48-72h"</span>,
+
+  <span class="code-method">init</span>() {
+    <span class="code-keyword">this</span>.<span class="code-method">build</span>();
+    <span class="code-keyword">this</span>.<span class="code-method">deploy</span>();
+    <span class="code-keyword">this</span>.<span class="code-method">animate</span>();
+  },
+
+  <span class="code-method">build</span>() {
+    <span class="code-keyword">const</span> <span class="code-variable">site</span> = <span class="code-keyword">new</span> <span class="code-class">Website</span>({
+      <span class="code-property">speed</span>: <span class="code-number">99</span>,
+      <span class="code-property">quality</span>: <span class="code-string">"premium"</span>,
+      <span class="code-property">responsive</span>: <span class="code-boolean">true</span>,
+      <span class="code-property">seo</span>: <span class="code-boolean">true</span>
+    });
+    <span class="code-keyword">return</span> site.<span class="code-method">compile</span>();
+  },
+
+  <span class="code-method">deploy</span>() {
+    <span class="code-keyword">const</span> <span class="code-variable">result</span> = <span class="code-keyword">await</span> <span class="code-method">publish</span>({
+      <span class="code-property">ssl</span>: <span class="code-boolean">true</span>,
+      <span class="code-property">cdn</span>: <span class="code-boolean">true</span>
+    });
+    <span class="code-keyword">return</span> result.<span class="code-property">url</span>;
+  },
+
+  <span class="code-method">animate</span>() {
+    <span class="code-variable">gsap</span>.<span class="code-method">to</span>(<span class="code-string">".hero"</span>, {
+      <span class="code-property">opacity</span>: <span class="code-number">1</span>,
+      <span class="code-property">y</span>: <span class="code-number">0</span>,
+      <span class="code-property">duration</span>: <span class="code-number">0.8</span>
+    });
+  }
+};
+
+app.<span class="code-method">init</span>();</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="İstatistikler">
+      <div class="stats-container">
+        <div class="stats-grid">
+          <div class="stat-card fade-in">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Mutlu Müşteri</div>
+          </div>
+          <div class="stat-card fade-in delay-100">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Yıllık Deneyim</div>
+          </div>
+          <div class="stat-card fade-in delay-200">
+            <div class="stat-number">48 Saat</div>
+            <div class="stat-label">Minimum Teslim</div>
+          </div>
+          <div class="stat-card fade-in delay-300">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Mobil Uyum</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hizmetler" class="services" aria-labelledby="services-title">
+      <div class="services-container">
+        <header class="section-header">
+          <h2 id="services-title" class="section-title fade-in">Ne <span class="highlight">Yapıyoruz?</span></h2>
+          <p class="section-subtitle fade-in delay-100">AI destekli araçlarımız ve uzman ekibimizle her türlü dijital ihtiyacınızı karşılıyoruz.</p>
+        </header>
+        <div class="services-grid">
+          <article class="service-card fade-in">
+            <div class="service-icon" aria-hidden="true">🌐</div>
+            <h3 class="service-title">Web Tasarım</h3>
+            <p class="service-description">Markanıza özel, modern ve dönüşüm odaklı web siteleri. Pixel-perfect, hızlı ve SEO dostu.</p>
+            <a href="#iletisim" class="service-link">Teklif Al →</a>
+          </article>
+          <article class="service-card fade-in delay-100">
+            <div class="service-icon" aria-hidden="true">⚡</div>
+            <h3 class="service-title">Hız Optimizasyonu</h3>
+            <p class="service-description">Hızlı açılan, SEO uyumlu ve performans odaklı altyapılar. Core Web Vitals odaklı geliştirme.</p>
+            <a href="#iletisim" class="service-link">Detay Al →</a>
+          </article>
+          <article class="service-card fade-in delay-200">
+            <div class="service-icon" aria-hidden="true">📱</div>
+            <h3 class="service-title">Responsive Tasarım</h3>
+            <p class="service-description">Tüm cihazlarda kusursuz çalışan mobil uyumlu arayüzler. Telefon, tablet, masaüstü — hepsi mükemmel.</p>
+            <a href="#iletisim" class="service-link">Detay Al →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="fiyatlar" class="pricing" aria-labelledby="pricing-title">
+      <div class="pricing-container">
+        <header class="section-header">
+          <h2 id="pricing-title" class="section-title fade-in">Paketler ve <span class="highlight">Fiyatlar</span></h2>
+          <p class="section-subtitle fade-in delay-100">İhtiyacınıza göre en uygun paketi seçin. Gizli ücret yok. Şeffaf fiyatlandırma politikamızla sürprizlerle karşılaşmazsınız.</p>
+        </header>
+        <div class="pricing-grid">
+          <article class="pricing-card fade-in" aria-label="Standart Paket">
+            <h3 class="pricing-name">Standart Paket</h3>
+            <div class="pricing-price">
+              <span class="price-new">3.500 <span class="price-currency">₺</span></span>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 3 Sayfaya Kadar</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Mobil Uyumlu Tasarım</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> SSL Sertifikası</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 48-72 Saat Teslimat</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 3 Revizyon Hakkı</li>
+            </ul>
+            <a href="#iletisim" class="btn btn-secondary">Paketi Seç</a>
+          </article>
+          <article class="pricing-card featured fade-in delay-100" aria-label="İşletme Paketi - En Popüler">
+            <span class="badge badge-popular">🔥 EN POPÜLER</span>
+            <h3 class="pricing-name">İşletme Paketi</h3>
+            <div class="pricing-price">
+              <span class="price-old">6.500 ₺</span>
+              <div class="pricing-price-stack">
+                <span class="price-new">5.000 <span class="price-currency">₺</span></span>
+              </div>
+              <span class="badge badge-discount">🔥 %23 İndirim</span>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 5 Sayfa</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Mobil Uyumlu Tasarım</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> SSL Sertifikası</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 24-72 Saat Teslimat</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 5 Revizyon Hakkı</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Öncelikli Destek</li>
+            </ul>
+            <a href="#iletisim" class="btn btn-primary btn-lg btn-pulse">Hemen Başla</a>
+          </article>
+          <article class="pricing-card fade-in delay-200" aria-label="Kurumsal Paket">
+            <h3 class="pricing-name">Kurumsal Paket</h3>
+            <div class="pricing-price">
+              <span class="price-old">10.000 ₺</span>
+              <div class="pricing-price-stack">
+                <span class="price-new">7.499 <span class="price-currency">₺</span></span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 10 Sayfa</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Mobil Uyumlu Tasarım</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> SSL Sertifikası</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> 24-48 Saat Teslimat</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Sınırsız Revizyon Hakkı</li>
+              <li class="pricing-feature"><span class="check" aria-hidden="true">✔</span> Öncelikli Destek</li>
+            </ul>
+            <a href="#iletisim" class="btn btn-secondary">Kurumsal Teklif Al</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="hakkimizda" class="about" aria-labelledby="about-title">
+      <div class="about-container">
+        <header class="section-header">
+          <h2 id="about-title" class="section-title fade-in">Hakkımızda</h2>
+          <p class="section-subtitle fade-in delay-100">Geleceği Deneyim ve Kaliteyle İnşa Ediyoruz</p>
+        </header>
+        <div class="about-content fade-in delay-200">
+          <p class="about-text">3 yılı aşkın süredir modern, hızlı ve kullanıcı odaklı web siteleri geliştiriyoruz. Her projede mükemmelliği hedefleyerek, müşterilerimizin dijital dünyadaki varlığını güçlendiriyoruz.</p>
+        </div>
+        <div class="mission-block fade-in">
+          <h3 class="mission-title">Misyonumuz</h3>
+          <p class="mission-text">Her İşletmenin Güçlü Bir Dijital Varlığı Olmalı. Küçük işletmelerden büyük markalara kadar herkesin kaliteli, hızlı ve profesyonel bir web sitesine sahip olması gerektiğine inanıyoruz. 3 yıllık web geliştirme deneyimimiz boyunca; modern tasarım anlayışı, performans odaklı geliştirme ve kullanıcı deneyimini ön planda tutarak işletmelere özel çözümler ürettik. Her projede yalnızca bir web sitesi değil, markanın dijital dünyadaki güvenini ve büyümesini destekleyen güçlü bir platform oluşturmayı hedefliyoruz. AI destekli süreçlerimizle bu misyonu daha hızlı ve etkin gerçekleştiriyoruz.</p>
+        </div>
+        <header class="section-header values-header">
+          <h3 class="section-title values-title fade-in">Bizi Biz Yapan <span class="highlight">Şeyler</span></h3>
+        </header>
+        <div class="values-grid">
+          <article class="value-card fade-in">
+            <div class="value-icon" aria-hidden="true">⚡</div>
+            <h4 class="value-title">Hız</h4>
+            <p class="value-description">48-72 saatlik teslimat iş modelimizin temelidir. AI destekli süreçlerimiz ve optimize edilmiş iş akışlarımız bunu mümkün kılar.</p>
+          </article>
+          <article class="value-card fade-in delay-100">
+            <div class="value-icon" aria-hidden="true">💎</div>
+            <h4 class="value-title">Kalite</h4>
+            <p class="value-description">Hız asla kaliteden ödün vermez. Her proje pixel-perfect, hatasız ve en yüksek standartlarda teslim edilir.</p>
+          </article>
+          <article class="value-card fade-in delay-200">
+            <div class="value-icon" aria-hidden="true">🤝</div>
+            <h4 class="value-title">Şeffaflık</h4>
+            <p class="value-description">Gizli ücret yok. Baştan net fiyatlandırma, kapsamlı proje detayları ve şeffaf iletişim ile güven inşa ediyoruz.</p>
+          </article>
+          <article class="value-card fade-in delay-300">
+            <div class="value-icon" aria-hidden="true">🚀</div>
+            <h4 class="value-title">Yenilikçilik</h4>
+            <p class="value-description">En güncel AI araçlarını, tasarım trendlerini ve geliştirme metodolojilerini sürekli takip ederek projelerimize entegre ediyoruz.</p>
+          </article>
+          <article class="value-card fade-in delay-400">
+            <div class="value-icon" aria-hidden="true">🎯</div>
+            <h4 class="value-title">Sonuç Odaklılık</h4>
+            <p class="value-description">Sadece güzel görünen değil, dönüşüm sağlayan, işletmenizin hedeflerine ulaşmasına yardımcı olan web siteleri geliştiriyoruz.</p>
+          </article>
+          <article class="value-card fade-in delay-500">
+            <div class="value-icon" aria-hidden="true">💬</div>
+            <h4 class="value-title">İletişim</h4>
+            <p class="value-description">Sorularınıza ve taleplerinize 2 saat içinde yanıt vermeyi taahhüt ediyoruz. Kesintisiz ve etkili iletişim önceliğimizdir.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <div class="testimonials-container">
+        <header class="section-header">
+          <h2 id="testimonials-title" class="section-title fade-in">Müşterilerimiz <span class="highlight">Ne Diyor?</span></h2>
+        </header>
+        <div class="testimonials-grid">
+          <article class="testimonial-card fade-in">
+            <div class="testimonial-stars" aria-label="5 yıldız">⭐⭐⭐⭐⭐</div>
+            <blockquote class="testimonial-text">"48 saatte canlıya aldık, inanılmaz bir hız ve kalite. Tüm ekibime öneririm. MEKYAZILIM farkını hissettirdi."</blockquote>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">AY</div>
+              <div>
+                <div class="testimonial-name">Ahmet Yılmaz</div>
+                <div class="testimonial-role">Restoran Sahibi</div>
+              </div>
+            </footer>
+          </article>
+          <article class="testimonial-card fade-in delay-100">
+            <div class="testimonial-stars" aria-label="5 yıldız">⭐⭐⭐⭐⭐</div>
+            <blockquote class="testimonial-text">"Fiyat-performans açısından piyasanın en iyisi. Revizyon süreçleri de çok hızlıydı. Kesinlikle tavsiye ederim."</blockquote>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">SK</div>
+              <div>
+                <div class="testimonial-name">Selin Kaya</div>
+                <div class="testimonial-role">E-ticaret Girişimcisi</div>
+              </div>
+            </footer>
+          </article>
+          <article class="testimonial-card fade-in delay-200">
+            <div class="testimonial-stars" aria-label="5 yıldız">⭐⭐⭐⭐⭐</div>
+            <blockquote class="testimonial-text">"Kurumsal paket aldık, 10 sayfayı 36 saatte teslim ettiler. MEKYAZILIM ekibine teşekkürler, kesinlikle tavsiye ederim."</blockquote>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">MD</div>
+              <div>
+                <div class="testimonial-name">Murat Demir</div>
+                <div class="testimonial-role">İnşaat Firması CEO</div>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sss" class="faq" aria-labelledby="faq-title">
+      <div class="faq-container">
+        <header class="section-header">
+          <h2 id="faq-title" class="section-title fade-in">Sıkça Sorulan <span class="highlight">Sorular</span></h2>
+        </header>
+        <div class="accordion">
+          <div class="accordion-item fade-in">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>48-72 saatte gerçekten teslim ediyor musunuz?</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">Evet, AI destekli ön geliştirme süreçlerimiz ve modüler altyapımız sayesinde tasarımlarınızı rekor sürede tamamlıyoruz. Projenin karmaşıklığına bağlı olarak bazı projeler 24 saatte bile tamamlanabilir, kaliteden ödün vermeden hızlı teslimat garantisi sunuyoruz.</div>
+            </div>
+          </div>
+          <div class="accordion-item fade-in delay-100">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>Fiyatlar neden bu kadar uygun?</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">Gereksiz bürokratik süreçleri ve maliyetleri eleyerek doğrudan sonuca odaklanıyoruz. Uzak çalışma modelimiz, AI araçlarımız ve verimli iş akışlarımız sayesinde operasyonel maliyetlerimizi düşürüyor, bu tasarrufları doğrudan fiyatlarımıza yansıtarak size en uygun teklifleri sunuyoruz.</div>
+            </div>
+          </div>
+          <div class="accordion-item fade-in delay-200">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>Sitenin kaynak kodunu alabilir miyim?</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">Kesinlikle. Teslimat sonunda sitenin tüm kaynak kodları ve mülkiyeti tamamen size aittir. Hosting ve domain konularında da size detaylı yönlendirme ve destek sağlıyoruz.</div>
+            </div>
+          </div>
+          <div class="accordion-item fade-in delay-300">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>Revizyon hakkım var mı?</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">Seçtiğiniz pakete göre 3, 5 veya sınırsız revizyon hakkınız bulunmaktadır. Revizyon taleplerinize en geç 24 saat içinde yanıt veriyor ve hızlıca uyguluyoruz. Müşteri memnuniyeti bizim için önceliktir.</div>
+            </div>
+          </div>
+          <div class="accordion-item fade-in delay-400">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>Mobil uyumlu mu olacak?</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">Kesinlikle. Tüm sitelerimiz en güncel responsive tasarım prensipleriyle geliştirilir ve telefon, tablet, masaüstü gibi tüm cihazlarda kusursuz bir görünüm ve kullanıcı deneyimi sunar. Mobil uyumluluk standart özelliğimizdir.</div>
+            </div>
+          </div>
+          <div class="accordion-item fade-in delay-500">
+            <button type="button" class="accordion-header" aria-expanded="false">
+              <span>Ödeme nasıl yapılıyor?</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">Proje başında %50 ön ödeme alıyoruz. Teslimat ve sizin tarafınızdan onayınızın ardından kalan %50'lik ödemeyi talep ediyoruz. Banka havalesi veya EFT ile ödeme kabul ediyoruz. Şeffaf ödeme koşulları sunmaktayız.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="iletisim" class="contact" aria-labelledby="contact-title">
+      <div class="contact-container">
+        <header class="section-header">
+          <h2 id="contact-title" class="section-title fade-in">Bizimle <span class="highlight">İletişime Geçin</span></h2>
+          <p class="section-subtitle fade-in delay-100">Projenizi konuşalım. Size özel en uygun paketi birlikte belirleyelim. Dijital hedeflerinize ulaşmanız için buradayız.</p>
+        </header>
+        <div class="contact-layout">
+          <div class="contact-side fade-in">
+            <div class="contact-info-card">
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">📧</div>
+                <div>
+                  <div class="contact-label">E-posta</div>
+                  <a href="mailto:mertegek12@gmail.com" class="contact-value">mertegek12@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-divider"></div>
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">📱</div>
+                <div>
+                  <div class="contact-label">Telefon</div>
+                  <a href="tel:+905307129426" class="contact-value">+90 530 712 94 26</a>
+                </div>
+              </div>
+              <div class="contact-divider"></div>
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">⏰</div>
+                <div>
+                  <div class="contact-label">Çalışma Saatleri</div>
+                  <div class="contact-value">Pzt–Cum, 09:00–20:00</div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-badges fade-in delay-100">
+              <div class="contact-badge">
+                <span class="contact-badge-icon" aria-hidden="true">⏱</span>
+                <span>2 saat içinde yanıt garantisi</span>
+              </div>
+              <div class="contact-badge">
+                <span class="contact-badge-icon" aria-hidden="true">🔒</span>
+                <span>Bilgileriniz güvende, asla paylaşılmaz</span>
+              </div>
+              <div class="contact-badge">
+                <span class="contact-badge-icon" aria-hidden="true">🚀</span>
+                <span>48-72 saatte teslim, söz veriyoruz</span>
+              </div>
+              <div class="contact-badge">
+                <span class="contact-badge-icon" aria-hidden="true">💎</span>
+                <span>50+ mutlu müşteri, sıra sizde</span>
+              </div>
+            </div>
+            <a href="https://wa.me/905307129426" target="_blank" rel="noopener noreferrer" class="whatsapp-btn-large fade-in delay-200">
+              <span aria-hidden="true">💬</span> Hemen WhatsApp'tan Yaz
+            </a>
+          </div>
+
+          <div class="contact-form-card fade-in delay-100">
+            <div id="form-success" class="success-message" role="status">
+              Mesajınız alındı. En kısa sürede dönüş yapacağız.
+            </div>
+            <div id="form-error" class="form-error-banner" role="alert"></div>
+            <form id="contact-form" novalidate>
+              <div class="hp-field" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="name">Ad Soyad *</label>
+                <input class="form-input" type="text" id="name" name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="Adınız Soyadınız">
+                <div class="form-error"></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">E-posta *</label>
+                <input class="form-input" type="email" id="email" name="email" required maxlength="120" autocomplete="email" placeholder="ornek@email.com">
+                <div class="form-error"></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Telefon</label>
+                <input class="form-input" type="tel" id="phone" name="phone" maxlength="30" autocomplete="tel" placeholder="+90 5xx xxx xx xx">
+                <div class="form-error"></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="package">İlgilendiğiniz Paket</label>
+                <select class="form-select" id="package" name="package">
+                  <option value="">Seçiniz (opsiyonel)</option>
+                  <option value="Standart Paket">Standart Paket — 3.500 ₺</option>
+                  <option value="İşletme Paketi">İşletme Paketi — 5.000 ₺</option>
+                  <option value="Kurumsal Paket">Kurumsal Paket — 7.499 ₺</option>
+                  <option value="Özel Teklif">Özel / Kurumsal Teklif</option>
+                </select>
+                <div class="form-error"></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Mesajınız *</label>
+                <textarea class="form-textarea" id="message" name="message" required minlength="10" maxlength="2000" rows="5" placeholder="Projenizden kısaca bahsedin…"></textarea>
+                <div class="form-error"></div>
+              </div>
+              <button type="submit" class="btn btn-primary form-submit">Mesaj Gönder</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">MEKYAZILIM</div>
+          <p class="footer-description">Modern, hızlı ve uygun fiyatlı web tasarım ajansı. İşletmenizi dijital dünyada profesyonel bir şekilde temsil ediyoruz.</p>
+        </div>
+        <nav aria-label="Footer navigasyon">
+          <h4 class="footer-heading">Hızlı Linkler</h4>
+          <div class="footer-links">
+            <a href="#ana-sayfa" class="footer-link">Ana Sayfa</a>
+            <a href="#hizmetler" class="footer-link">Hizmetler</a>
+            <a href="#fiyatlar" class="footer-link">Fiyatlar</a>
+            <a href="#hakkimizda" class="footer-link">Hakkımızda</a>
+            <a href="#sss" class="footer-link">SSS</a>
+            <a href="#iletisim" class="footer-link">İletişim</a>
+          </div>
+        </nav>
+        <div>
+          <h4 class="footer-heading">İletişim</h4>
+          <div class="footer-contact-item">📧 mertegek12@gmail.com</div>
+          <div class="footer-contact-item">📱 +90 530 712 94 26</div>
+          <div class="footer-contact-item">⏰ Pzt–Cum, 09:00–20:00</div>
+          <div class="footer-socials">
+            <a href="https://wa.me/905307129426" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 MEKYAZILIM — Tüm Hakları Saklıdır. | Mert tarafından tasarlanmıştır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-whatsapp" aria-label="WhatsApp ile iletişime geç">
+    <span class="floating-whatsapp-label">Yazın!</span>
+    <a href="https://wa.me/905307129426" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" aria-label="WhatsApp ile mesaj gönder">
+      💬
+    </a>
+  </div>
+
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

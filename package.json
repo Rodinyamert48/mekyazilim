@@ -1,0 +1,17 @@
+{
+  "name": "mekyazilim",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MEKYAZILIM — Profesyonel web tasarım ajansı sitesi",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npx vercel dev"
+  },
+  "dependencies": {
+    "resend": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

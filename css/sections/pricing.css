@@ -1,0 +1,112 @@
+.pricing {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.pricing-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.pricing-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: var(--transition-base);
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px var(--glow-blue);
+  border-color: var(--accent-primary);
+}
+
+.pricing-card.featured {
+  transform: scale(1.05);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 50px var(--glow-blue), 0 0 100px rgba(37, 99, 235, 0.2);
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.15), var(--bg-surface));
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 0 60px var(--glow-blue), 0 0 120px rgba(37, 99, 235, 0.3);
+}
+
+.pricing-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.pricing-price {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-price .price-new {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.pricing-price-stack {
+  margin-top: 0.25rem;
+}
+
+.pricing-price .badge-discount {
+  margin-top: 0.5rem;
+  display: inline-flex;
+}
+
+.pricing-features {
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.pricing-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.pricing-feature .check {
+  color: var(--neon-blue);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.pricing-card .btn {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-10px);
+  }
+}

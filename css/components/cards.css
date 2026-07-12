@@ -1,0 +1,67 @@
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 40px var(--glow-blue);
+}
+
+.card-glass {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+}
+
+.card-pricing {
+  background: var(--bg-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: var(--transition-base);
+  position: relative;
+}
+
+.card-pricing:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px var(--glow-blue);
+  border-color: var(--accent-primary);
+}
+
+.card-pricing.featured {
+  transform: scale(1.05);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 50px var(--glow-blue), 0 0 100px rgba(37, 99, 235, 0.2);
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.15), var(--bg-surface));
+}
+
+.card-pricing.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 0 60px var(--glow-blue), 0 0 120px rgba(37, 99, 235, 0.3);
+}
+
+.card-testimonial {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: var(--transition-base);
+}
+
+.card-testimonial:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px var(--glow-blue);
+  border-color: rgba(56, 189, 248, 0.3);
+}
