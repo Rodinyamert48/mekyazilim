@@ -32,7 +32,9 @@ ${readPartial('sections/stats.html')}
 ${readPartial('sections/services.html')}
 ${readPartial('sections/portfolio.html')}
 ${readPartial('sections/process.html')}
+${readPartial('sections/tech.html')}
 ${readPartial('sections/pricing.html')}
+${readPartial('sections/blog.html')}
 ${readPartial('sections/about.html')}
 ${readPartial('sections/faq.html')}
 ${readPartial('sections/contact.html')}

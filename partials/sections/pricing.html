@@ -57,5 +57,142 @@
             <a href="#iletisim" class="btn btn-secondary">Kurumsal Teklif Al</a>
           </article>
         </div>
+
+        <div class="pricing-actions">
+          <button type="button" class="btn btn-secondary" id="compare-toggle" aria-expanded="false" aria-controls="compare-table">
+            📊 Paketleri Karşılaştır
+          </button>
+        </div>
+
+        <div id="compare-table" class="compare-table-wrapper" hidden>
+          <div class="compare-table-scroll">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Özellikler</th>
+                  <th class="col-standard">Standart</th>
+                  <th class="col-business featured-col">İşletme</th>
+                  <th class="col-enterprise">Kurumsal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Fiyat</td>
+                  <td class="col-standard">5.000 ₺</td>
+                  <td class="col-business featured-col">7.500 ₺</td>
+                  <td class="col-enterprise">10.000 ₺</td>
+                </tr>
+                <tr>
+                  <td>Sayfa Sayısı</td>
+                  <td class="col-standard">1</td>
+                  <td class="col-business featured-col">5</td>
+                  <td class="col-enterprise">10</td>
+                </tr>
+                <tr>
+                  <td>Mobil Uyumlu</td>
+                  <td class="col-standard check-yes">✔</td>
+                  <td class="col-business featured-col check-yes">✔</td>
+                  <td class="col-enterprise check-yes">✔</td>
+                </tr>
+                <tr>
+                  <td>SEO Optimizasyonu</td>
+                  <td class="col-standard check-no">—</td>
+                  <td class="col-business featured-col check-yes">✔</td>
+                  <td class="col-enterprise check-yes">✔</td>
+                </tr>
+                <tr>
+                  <td>Teslimat Süresi</td>
+                  <td class="col-standard">48-72 Saat</td>
+                  <td class="col-business featured-col">24-72 Saat</td>
+                  <td class="col-enterprise">24-48 Saat</td>
+                </tr>
+                <tr>
+                  <td>Revizyon Hakkı</td>
+                  <td class="col-standard">3</td>
+                  <td class="col-business featured-col">5</td>
+                  <td class="col-enterprise">Sınırsız</td>
+                </tr>
+                <tr>
+                  <td>Öncelikli Destek</td>
+                  <td class="col-standard check-no">—</td>
+                  <td class="col-business featured-col check-yes">✔</td>
+                  <td class="col-enterprise check-yes">✔</td>
+                </tr>
+                <tr>
+                  <td>Performans Optimizasyonu</td>
+                  <td class="col-standard check-no">—</td>
+                  <td class="col-business featured-col check-no">—</td>
+                  <td class="col-enterprise check-yes">✔</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-calculator fade-in">
+          <header class="section-header">
+            <h3 class="section-title">Fiyat <span class="highlight">Hesapla</span></h3>
+            <p class="section-subtitle">İhtiyacına göre anlık fiyatını gör, bütçeni önceden planla.</p>
+          </header>
+          <div class="calculator-grid">
+            <div class="calculator-controls">
+              <div class="form-group">
+                <label for="calc-pages">Sayfa Sayısı</label>
+                <div class="range-wrapper">
+                  <input type="range" id="calc-pages" min="1" max="20" value="5" step="1">
+                  <span class="range-value" id="calc-pages-value">5</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="calc-seo" checked>
+                  <span>SEO Optimizasyonu (+500 ₺)</span>
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="calc-responsive" checked>
+                  <span>Mobil Uyumlu Tasarım (+500 ₺)</span>
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="calc-performance">
+                  <span>Performans Optimizasyonu (+750 ₺)</span>
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="calc-support">
+                  <span>Öncelikli Destek (+500 ₺)</span>
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="calc-ecommerce">
+                  <span>E-ticaret Entegrasyonu (+2.500 ₺)</span>
+                </label>
+              </div>
+            </div>
+            <div class="calculator-result">
+              <div class="calc-result-card">
+                <div class="calc-label">Tahmini Fiyat</div>
+                <div class="calc-price" id="calc-price">7.500 ₺</div>
+                <div class="calc-breakdown">
+                  <div class="calc-breakdown-item">
+                    <span>Sayfa Başına</span>
+                    <span id="calc-per-page">1.500 ₺</span>
+                  </div>
+                  <div class="calc-breakdown-item">
+                    <span>Ek Özellikler</span>
+                    <span id="calc-extras">1.000 ₺</span>
+                  </div>
+                </div>
+                <a href="#iletisim" class="btn btn-primary btn-lg" style="margin-top:1.5rem;width:100%">Teklif Al</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>

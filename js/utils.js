@@ -125,6 +125,13 @@ function countUp(element, target, duration = 2000, suffix = '') {
   requestAnimationFrame(updateCount);
 }
 
+function setCopyrightYear() {
+  const yearEl = document.getElementById('copyright-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+}
+
 export {
   smoothScrollTo,
   setupIntersectionObserver,
@@ -135,5 +142,6 @@ export {
   throttle,
   isElementInViewport,
   formatNumber,
-  countUp
+  countUp,
+  setCopyrightYear
 };
