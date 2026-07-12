@@ -2,11 +2,12 @@ export function initPriceCalculator() {
   const pagesInput = document.getElementById('calc-pages');
   const pagesValue = document.getElementById('calc-pages-value');
   const priceEl = document.getElementById('calc-price');
+  const totalEl = document.getElementById('calc-total');
   const perPageEl = document.getElementById('calc-per-page');
   const extrasEl = document.getElementById('calc-extras');
-  const checkboxes = document.querySelectorAll('.calculator-controls input[type="checkbox"]');
+  const checkboxes = document.querySelectorAll('.feature-chip input[type="checkbox"]');
 
-  const BASE_PRICE = 2500;
+  const BASE = 2500;
   const PAGE_RATE = 1000;
 
   if (!pagesInput) return;
@@ -27,24 +28,34 @@ export function initPriceCalculator() {
     if (ecommerce) extras += 2500;
 
     const pageCost = pages * PAGE_RATE;
-    const total = BASE_PRICE + pageCost + extras;
+    const total = BASE + pageCost + extras;
 
     pagesValue.textContent = pages;
 
-    const oldPrice = priceEl.textContent;
-    const newPrice = formatPrice(total);
-    if (oldPrice !== newPrice) {
+    const oldVal = priceEl.textContent;
+    const newVal = formatPrice(total);
+    if (oldVal !== newVal) {
       priceEl.classList.add('pop');
-      setTimeout(() => priceEl.classList.remove('pop'), 200);
+      totalEl.classList.add('pop');
+      setTimeout(() => {
+        priceEl.classList.remove('pop');
+        totalEl.classList.remove('pop');
+      }, 250);
     }
 
-    priceEl.textContent = newPrice;
-    perPageEl.textContent = formatPrice(pageCost);
-    extrasEl.textContent = formatPrice(extras);
+    priceEl.textContent = newVal;
+    totalEl.textContent = newVal + ' ₺';
+    perPageEl.textContent = formatPrice(pageCost) + ' ₺';
+    extrasEl.textContent = formatPrice(extras) + ' ₺';
+
+    document.querySelectorAll('.feature-chip').forEach(chip => {
+      const cb = chip.querySelector('input[type="checkbox"]');
+      chip.classList.toggle('active', cb.checked);
+    });
   }
 
   function formatPrice(amount) {
-    return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' ₺';
+    return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   }
 
   pagesInput.addEventListener('input', calculate);
