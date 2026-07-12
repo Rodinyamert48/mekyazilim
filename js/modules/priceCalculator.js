@@ -53,7 +53,8 @@ export function initPriceCalculator() {
     const total = Math.round(subtotal * speedMul);
 
     pagesValue.textContent = pages;
-    deliveryValue.textContent = deliveryHours + ' Saat (' + getSpeedLabel(deliveryHours) + ')';
+    deliveryValue.textContent = deliveryHours;
+    speedFactorEl.textContent = deliveryHours + ' Saat (' + getSpeedLabel(deliveryHours) + ')';
 
     const oldVal = priceEl.textContent;
     const newVal = formatPrice(total);
@@ -70,7 +71,6 @@ export function initPriceCalculator() {
     totalEl.textContent = newVal + ' ₺';
     perPageEl.textContent = formatPrice(pageCost) + ' ₺';
     extrasEl.textContent = formatPrice(extras) + ' ₺';
-    speedFactorEl.textContent = speedMul.toFixed(1) + 'x';
 
     document.querySelectorAll('.feature-chip').forEach(chip => {
       const cb = chip.querySelector('input[type="checkbox"]');
