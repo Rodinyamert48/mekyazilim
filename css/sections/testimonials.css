@@ -29,8 +29,8 @@
 
 .testimonial-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 30px var(--glow-blue);
-  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 30px var(--glow-green);
+  border-color: rgba(52, 211, 153, 0.3);
 }
 
 .testimonial-stars {
@@ -57,7 +57,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-primary), var(--neon-blue));
+  background: linear-gradient(135deg, var(--accent-primary), var(--neon-green));
   display: flex;
   align-items: center;
   justify-content: center;

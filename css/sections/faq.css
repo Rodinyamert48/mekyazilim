@@ -26,12 +26,12 @@
 }
 
 .accordion-item:hover {
-  border-color: rgba(56, 189, 248, 0.2);
+  border-color: rgba(52, 211, 153, 0.2);
 }
 
 .accordion-item.active {
-  border-color: rgba(56, 189, 248, 0.3);
-  box-shadow: 0 0 20px rgba(37, 99, 235, 0.15);
+  border-color: rgba(52, 211, 153, 0.3);
+  box-shadow: 0 0 20px rgba(5, 150, 105, 0.15);
 }
 
 .accordion-header {
@@ -50,7 +50,7 @@
 }
 
 .accordion-header:hover {
-  color: var(--neon-blue);
+  color: var(--neon-green);
 }
 
 .accordion-icon {
@@ -65,7 +65,7 @@
 .accordion-icon::after {
   content: '';
   position: absolute;
-  background: var(--neon-blue);
+  background: var(--neon-green);
   transition: transform 0.3s ease;
   border-radius: 2px;
 }

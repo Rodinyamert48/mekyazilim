@@ -5,7 +5,7 @@
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--neon-blue), var(--accent-primary));
+  background: linear-gradient(135deg, var(--neon-green), var(--accent-primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -15,8 +15,8 @@
   text-shadow: 0 0 20px var(--glow-neon);
 }
 
-.glow-blue {
-  box-shadow: 0 0 40px var(--glow-blue);
+.glow-green {
+  box-shadow: 0 0 40px var(--glow-green);
 }
 
 .glow-neon {
@@ -100,7 +100,7 @@
 
 .skip-link:focus {
   top: 1rem;
-  outline: 2px solid var(--neon-blue);
+  outline: 2px solid var(--neon-green);
   outline-offset: 2px;
 }
 

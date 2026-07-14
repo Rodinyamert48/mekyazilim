@@ -27,8 +27,8 @@
 
 .blog-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(56, 189, 248, 0.3);
-  box-shadow: 0 0 30px var(--glow-blue);
+  border-color: rgba(52, 211, 153, 0.3);
+  box-shadow: 0 0 30px var(--glow-green);
 }
 
 .blog-image {
@@ -40,13 +40,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(56, 189, 248, 0.05));
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.1), rgba(52, 211, 153, 0.05));
 }
 
 .blog-img-placeholder svg {
   width: 48px;
   height: 48px;
-  color: var(--neon-blue);
+  color: var(--neon-green);
   opacity: 0.5;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .blog-category {
-  color: var(--neon-blue);
+  color: var(--neon-green);
   font-weight: 600;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .blog-link {
-  color: var(--neon-blue);
+  color: var(--neon-green);
   font-weight: 600;
   font-size: 0.9rem;
   display: inline-flex;

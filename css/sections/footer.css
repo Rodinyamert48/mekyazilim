@@ -21,7 +21,7 @@
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #60A5FA, #38bdf8);
+  background: linear-gradient(135deg, #6ee7b7, #34d399);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -55,7 +55,7 @@
 }
 
 .footer-link:hover {
-  color: var(--neon-blue);
+  color: var(--neon-green);
   padding-left: 0.5rem;
 }
 
@@ -113,7 +113,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-primary), var(--neon-blue));
+  background: linear-gradient(135deg, var(--accent-primary), var(--neon-green));
   color: var(--text-primary);
   font-size: 1.25rem;
   display: flex;
@@ -124,7 +124,7 @@
   visibility: hidden;
   transform: translateY(20px);
   transition: var(--transition-base);
-  box-shadow: 0 0 20px var(--glow-blue);
+  box-shadow: 0 0 20px var(--glow-green);
 }
 
 .scroll-top.visible {

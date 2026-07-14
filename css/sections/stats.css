@@ -28,15 +28,15 @@
 
 .stat-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(56, 189, 248, 0.3);
-  box-shadow: 0 0 30px var(--glow-blue);
+  border-color: rgba(52, 211, 153, 0.3);
+  box-shadow: 0 0 30px var(--glow-green);
 }
 
 .stat-number {
   font-family: var(--font-heading);
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--neon-blue), var(--accent-primary));
+  background: linear-gradient(135deg, var(--neon-green), var(--accent-primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

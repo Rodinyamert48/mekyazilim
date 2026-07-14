@@ -16,14 +16,14 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-primary), #3b82f6);
+  background: linear-gradient(135deg, var(--accent-primary), #10b981);
   color: var(--text-primary);
-  box-shadow: 0 4px 15px var(--glow-blue);
+  box-shadow: 0 4px 15px var(--glow-green);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #3b82f6, var(--neon-blue));
-  box-shadow: 0 6px 25px var(--glow-blue);
+  background: linear-gradient(135deg, #10b981, var(--neon-green));
+  box-shadow: 0 6px 25px var(--glow-green);
   transform: translateY(-2px);
 }
 
@@ -39,8 +39,8 @@
 }
 
 .btn-secondary:hover {
-  border-color: var(--neon-blue);
-  color: var(--neon-blue);
+  border-color: var(--neon-green);
+  color: var(--neon-green);
   box-shadow: 0 0 20px var(--glow-neon);
   transform: translateY(-2px);
 }

@@ -32,7 +32,7 @@
 }
 
 .mission-title {
-  color: var(--neon-blue);
+  color: var(--neon-green);
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
@@ -68,8 +68,8 @@
 
 .value-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(56, 189, 248, 0.3);
-  box-shadow: 0 0 30px var(--glow-blue);
+  border-color: rgba(52, 211, 153, 0.3);
+  box-shadow: 0 0 30px var(--glow-green);
 }
 
 .value-icon {

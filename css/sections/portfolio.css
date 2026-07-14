@@ -28,8 +28,8 @@
 
 .portfolio-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 40px var(--glow-blue);
-  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 40px var(--glow-green);
+  border-color: rgba(52, 211, 153, 0.3);
 }
 
 .portfolio-preview {
@@ -64,7 +64,7 @@
 
 .portfolio-thumb {
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(56, 189, 248, 0.05));
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.1), rgba(52, 211, 153, 0.05));
 }
 
 .thumb-content {
@@ -103,7 +103,7 @@
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-full);
-  color: var(--neon-blue);
+  color: var(--neon-green);
 }
 
 .portfolio-body {
@@ -133,8 +133,8 @@
 .portfolio-feature {
   font-size: 0.8rem;
   padding: 0.35rem 0.85rem;
-  background: rgba(37, 99, 235, 0.15);
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  background: rgba(5, 150, 105, 0.15);
+  border: 1px solid rgba(5, 150, 105, 0.2);
   border-radius: var(--radius-full);
   color: var(--neon-light);
 }

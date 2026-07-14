@@ -10,8 +10,8 @@
 
 .card:hover {
   transform: translateY(-8px);
-  border-color: rgba(56, 189, 248, 0.3);
-  box-shadow: 0 0 40px var(--glow-blue);
+  border-color: rgba(52, 211, 153, 0.3);
+  box-shadow: 0 0 40px var(--glow-green);
 }
 
 .card-glass {
@@ -34,20 +34,20 @@
 
 .card-pricing:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 40px var(--glow-blue);
+  box-shadow: 0 0 40px var(--glow-green);
   border-color: var(--accent-primary);
 }
 
 .card-pricing.featured {
   transform: scale(1.05);
   border-color: var(--accent-primary);
-  box-shadow: 0 0 50px var(--glow-blue), 0 0 100px rgba(37, 99, 235, 0.2);
-  background: linear-gradient(180deg, rgba(37, 99, 235, 0.15), var(--bg-surface));
+  box-shadow: 0 0 50px var(--glow-green), 0 0 100px rgba(5, 150, 105, 0.2);
+  background: linear-gradient(180deg, rgba(5, 150, 105, 0.15), var(--bg-surface));
 }
 
 .card-pricing.featured:hover {
   transform: scale(1.05) translateY(-10px);
-  box-shadow: 0 0 60px var(--glow-blue), 0 0 120px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 0 60px var(--glow-green), 0 0 120px rgba(5, 150, 105, 0.3);
 }
 
 .card-testimonial {
@@ -62,6 +62,6 @@
 
 .card-testimonial:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 30px var(--glow-blue);
-  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 30px var(--glow-green);
+  border-color: rgba(52, 211, 153, 0.3);
 }

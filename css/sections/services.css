@@ -20,7 +20,7 @@
 }
 
 .section-title .highlight {
-  background: linear-gradient(135deg, var(--neon-blue), var(--accent-primary));
+  background: linear-gradient(135deg, var(--neon-green), var(--accent-primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -52,8 +52,8 @@
 
 .service-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(56, 189, 248, 0.3);
-  box-shadow: 0 0 40px var(--glow-blue);
+  border-color: rgba(52, 211, 153, 0.3);
+  box-shadow: 0 0 40px var(--glow-green);
 }
 
 .service-icon {
@@ -72,7 +72,7 @@
 }
 
 .service-link {
-  color: var(--neon-blue);
+  color: var(--neon-green);
   font-weight: 600;
   display: inline-flex;
   align-items: center;

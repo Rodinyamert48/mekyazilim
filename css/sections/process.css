@@ -22,7 +22,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--accent-primary), var(--neon-blue));
+  background: linear-gradient(to bottom, var(--accent-primary), var(--neon-green));
   opacity: 0.3;
 }
 
@@ -42,7 +42,7 @@
   height: 4rem;
   min-width: 4rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-primary), var(--neon-blue));
+  background: linear-gradient(135deg, var(--accent-primary), var(--neon-green));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +52,7 @@
   color: var(--text-primary);
   position: relative;
   z-index: 1;
-  box-shadow: 0 0 20px var(--glow-blue);
+  box-shadow: 0 0 20px var(--glow-green);
 }
 
 .step-content {
